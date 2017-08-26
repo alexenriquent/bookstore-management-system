@@ -1,0 +1,84 @@
+﻿@model BookStore.Models.Book
+
+@{
+    ViewBag.Title = "AddBook";
+}
+
+<h2>Add</h2>
+
+<h4>Book Database</h4>
+<hr />
+<table class="book-database">
+    <tr>
+        <th>Num</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>Price</th>
+        <th>Stock</th>
+    </tr>
+
+    @for (int i = 0; i < ViewBag.books.Count; i++) {
+        <tr>
+            <td>@ViewBag.books[i].Index</td>
+            <td>@ViewBag.books[i].ID</td>
+            <td>@ViewBag.books[i].Name</td>
+            <td>@ViewBag.books[i].Author </td>
+            <td>@ViewBag.books[i].Year</td>
+            <td>$@ViewBag.books[i].Price</td>
+            <td>@ViewBag.books[i].Stock</td>
+        </tr>
+    }
+</table>
+<br />
+
+@using (Html.BeginForm("AddBook", "BookStore", FormMethod.Post)) {
+    <table cellpadding="2" cellspacing="0">
+        <tr>
+            <th colspan="2" align="center">Book Details</th>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.ID): </td>
+            <td>@Html.TextBoxFor(model => model.ID)</td>
+            <td>@Html.ValidationMessageFor(model => model.ID)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Name):: </td>
+            <td>@Html.TextBoxFor(model => model.Name)</td>
+            <td>@Html.ValidationMessageFor(model => model.Name)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Author): </td>
+            <td>@Html.TextBoxFor(model => model.Author)</td>
+            <td>@Html.ValidationMessageFor(model => model.Author)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Year): </td>
+            <td>@Html.TextBoxFor(model => model.Year, new { id = "year-textbox" })</td>
+            <td>@Html.ValidationMessageFor(model => model.Year)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Price): </td>
+            <td>@Html.TextBoxFor(model => model.Price, new { id = "price-textbox" })</td>
+            <td>@Html.ValidationMessageFor(model => model.Price)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Stock): </td>
+            <td>@Html.TextBoxFor(model => model.Stock, new { id = "stock-textbox" })</td>
+            <td>@Html.ValidationMessageFor(model => model.Stock)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add" /></td>
+        </tr>
+    </table>
+}
+
+@section Scripts {
+    <script type="text/javascript">
+    $(function () {
+        $("#year-textbox, #price-textbox, #stock-textbox").val("");
+    });
+    </script>
+}

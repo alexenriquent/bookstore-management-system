@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "GetAllBooks";
+}
+
+<h2>Get</h2>
+
+<h4>Book Database</h4>
+<hr />
+<table class="book-database">
+    <tr>
+        <th>Num</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>Price</th>
+        <th>Stock</th>
+    </tr>
+
+    @for (int i = 0; i < ViewBag.books.Count; i++) {
+        <tr>
+            <td>@ViewBag.books[i].Index</td>
+            <td>@ViewBag.books[i].ID</td>
+            <td>@ViewBag.books[i].Name</td>
+            <td>@ViewBag.books[i].Author </td>
+            <td>@ViewBag.books[i].Year</td>
+            <td>$@ViewBag.books[i].Price</td>
+            <td>@ViewBag.books[i].Stock</td>
+        </tr>
+    }
+</table>

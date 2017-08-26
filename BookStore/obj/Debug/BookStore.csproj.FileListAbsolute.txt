@@ -1,0 +1,92 @@
+\\Mac\Home\Desktop\SOA\BookStore\bin\ApplicationInsights.config
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\csc.exe
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\Microsoft.CSharp.Core.targets
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\System.Collections.Immutable.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\System.Reflection.Metadata.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\vbc.exe
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\VBCSCompiler.exe
+\\Mac\Home\Desktop\SOA\BookStore\bin\roslyn\VBCSCompiler.exe.config
+\\Mac\Home\Desktop\SOA\BookStore\bin\BookStore.dll.config
+\\Mac\Home\Desktop\SOA\BookStore\bin\BookStore.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\BookStore.pdb
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.AI.Agent.Intercept.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.AI.DependencyCollector.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.AI.Web.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.AI.WindowsServer.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.ApplicationInsights.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Helpers.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Mvc.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Razor.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Webpages.Deployment.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Webpages.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Webpages.Razor.dll
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.AI.DependencyCollector.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.AI.Web.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.AI.WindowsServer.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.ApplicationInsights.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Razor.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Webpages.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Webpages.Deployment.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Webpages.Razor.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Helpers.xml
+\\Mac\Home\Desktop\SOA\BookStore\bin\System.Web.Mvc.xml
+\\Mac\Home\Desktop\SOA\BookStore\obj\Debug\BookStore.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\SOA\BookStore\obj\Debug\BookStore.dll
+\\Mac\Home\Desktop\SOA\BookStore\obj\Debug\BookStore.pdb
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\ApplicationInsights.config
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\csc.exe
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\Microsoft.CSharp.Core.targets
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\System.Collections.Immutable.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\System.Reflection.Metadata.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\vbc.exe
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\VBCSCompiler.exe
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\roslyn\VBCSCompiler.exe.config
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\BookStore.dll.config
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\BookStore.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\BookStore.pdb
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.AI.Agent.Intercept.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.AI.DependencyCollector.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.AI.Web.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.AI.WindowsServer.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.ApplicationInsights.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Helpers.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Mvc.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Razor.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Webpages.Deployment.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Webpages.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Webpages.Razor.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.AI.DependencyCollector.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.AI.Web.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.AI.WindowsServer.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.ApplicationInsights.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Razor.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Webpages.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Webpages.Deployment.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Webpages.Razor.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Helpers.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\bin\System.Web.Mvc.xml
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\obj\Debug\BookStore.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\obj\Debug\BookStore.dll
+\\Mac\Home\Desktop\Bookstore Management System\BookStore\obj\Debug\BookStore.pdb
