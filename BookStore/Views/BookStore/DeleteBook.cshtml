@@ -40,8 +40,8 @@
             <td>@Html.DropDownList("attribute", new List<SelectListItem> {
                     new SelectListItem { Text = "Num", Value = "num" },
                     new SelectListItem { Text = "ID", Value = "id" },
-                    new SelectListItem { Text = "Year", Value = "year" }}, "Please select")</td>
-            <td hidden id="index">@Html.TextBoxFor(model => model.Index, new { id = "index-textbox" })</td>
+                    new SelectListItem { Text = "Year", Value = "year" }})</td>
+            <td id="index">@Html.TextBoxFor(model => model.Index, new { id = "index-textbox" })</td>
             <td hidden id="id">@Html.TextBoxFor(model => model.ID, new { id = "id-textbox" })</td>
             <td hidden id="year">@Html.TextBoxFor(model => model.Year, new { id = "year-textbox" })</td>
             <td id="index-message">@Html.ValidationMessageFor(model => model.Index)</td>
@@ -53,24 +53,30 @@
 
 @section Scripts {
     <script type="text/javascript">
-    $(function () {
-        $("#attribute").change(function () {
-            $("#index-textbox, #id-textbox, #year-textbox").val("");
-            var selectedValue = $(this).val();
-            if (selectedValue == "num") {
-                $("#index, #index-message").show();
-                $("#id, #id-message, #year, #year-message").hide();
-            } else if (selectedValue == "id") {
-                $("#id, #id-message").show();
-                $("#index, #index-message, #year, #year-message").hide();
-            } else if (selectedValue == "year") {
-                $("#year, #year-message").show();
-                $("#index, #index-message, #id, #id-message").hide();
-            } else {
-                $("#index, #index-message, #id, #id-message, #year, #year-message").hide();
-            }
+        $.fn.clearErrors = function () {
+            $(this).each(function () {
+                $(this).find(".field-validation-error").empty();
+            });
+        };
+
+        $(function () {
+            $("#index-textbox").val("");
+            $("#attribute").change(function () {
+                $("#index-message, #id-message, #year-message").clearErrors();
+                $("#index-textbox, #id-textbox, #year-textbox").val("");
+                var selectedValue = $(this).val();
+                if (selectedValue == "num") {
+                    $("#index, #index-message").show();
+                    $("#id, #id-message, #year, #year-message").hide();
+                } else if (selectedValue == "id") {
+                    $("#id, #id-message").show();
+                    $("#index, #index-message, #year, #year-message").hide();
+                } else if (selectedValue == "year") {
+                    $("#year, #year-message").show();
+                    $("#index, #index-message, #id, #id-message").hide();
+                }
+            });
         });
-    });
     </script>
 }
 

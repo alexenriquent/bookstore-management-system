@@ -29,8 +29,6 @@ namespace BookStore.localhost {
     [System.Web.Services.WebServiceBindingAttribute(Name="DataStorageSoap", Namespace="http://tempuri.org/")]
     public partial class DataStorage : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback WorkspaceOperationCompleted;
-        
         private System.Threading.SendOrPostCallback ReadOperationCompleted;
         
         private System.Threading.SendOrPostCallback WriteOperationCompleted;
@@ -74,40 +72,10 @@ namespace BookStore.localhost {
         }
         
         /// <remarks/>
-        public event WorkspaceCompletedEventHandler WorkspaceCompleted;
-        
-        /// <remarks/>
         public event ReadCompletedEventHandler ReadCompleted;
         
         /// <remarks/>
         public event WriteCompletedEventHandler WriteCompleted;
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Workspace", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string Workspace() {
-            object[] results = this.Invoke("Workspace", new object[0]);
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void WorkspaceAsync() {
-            this.WorkspaceAsync(null);
-        }
-        
-        /// <remarks/>
-        public void WorkspaceAsync(object userState) {
-            if ((this.WorkspaceOperationCompleted == null)) {
-                this.WorkspaceOperationCompleted = new System.Threading.SendOrPostCallback(this.OnWorkspaceOperationCompleted);
-            }
-            this.InvokeAsync("Workspace", new object[0], this.WorkspaceOperationCompleted, userState);
-        }
-        
-        private void OnWorkspaceOperationCompleted(object arg) {
-            if ((this.WorkspaceCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.WorkspaceCompleted(this, new WorkspaceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Read", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -180,32 +148,6 @@ namespace BookStore.localhost {
                 return true;
             }
             return false;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    public delegate void WorkspaceCompletedEventHandler(object sender, WorkspaceCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class WorkspaceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal WorkspaceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
         }
     }
     

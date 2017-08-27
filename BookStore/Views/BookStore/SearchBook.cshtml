@@ -1,0 +1,89 @@
+﻿@model BookStore.Models.Book
+
+@{
+    ViewBag.Title = "SearchBook";
+}
+
+<h2>Search</h2>
+
+<h4>Book Database</h4>
+<hr />
+
+@using (Html.BeginForm("SearchBook", "BookStore", FormMethod.Post)) {
+    <table cellpadding="2" cellspacing="0">
+        <tr>
+            <td><input type="submit" value="Search" /></td>
+            <td>
+                @Html.DropDownList("attribute", new List<SelectListItem> {
+                    new SelectListItem { Text = "ID", Value = "id" },
+                    new SelectListItem { Text = "Name", Value = "name" },
+                    new SelectListItem { Text = "Author", Value = "author" },
+                    new SelectListItem { Text = "Year", Value = "year" }})</td>
+            <td id="id">@Html.TextBoxFor(model => model.ID, new { id = "id-textbox" })</td>
+            <td hidden id="name">@Html.TextBoxFor(model => model.Name, new { id = "name-textbox" })</td>
+            <td hidden id="author">@Html.TextBoxFor(model => model.Author, new { id = "author-textbox" })</td>
+            <td hidden id="year">@Html.TextBoxFor(model => model.Year, new { id = "year-textbox" })</td>
+            <td id="id-message">@Html.ValidationMessageFor(model => model.ID)</td>
+            <td id="name-message">@Html.ValidationMessageFor(model => model.Name)</td>
+            <td id="author-message">@Html.ValidationMessageFor(model => model.Author)</td>
+            <td id="year-message">@Html.ValidationMessageFor(model => model.Year)</td>
+        </tr>
+    </table>
+}
+<br/>
+
+<table class="book-database">
+    <tr>
+        <th>Num</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>Price</th>
+        <th>Stock</th>
+    </tr>
+
+    @for (int i = 1; i <= ViewBag.books.Count; i++) {
+        <tr>
+            <td>@i</td>
+            <td>@ViewBag.books[i - 1].ID</td>
+            <td>@ViewBag.books[i - 1].Name</td>
+            <td>@ViewBag.books[i - 1].Author </td>
+            <td>@ViewBag.books[i - 1].Year</td>
+            <td>$@ViewBag.books[i - 1].Price</td>
+            <td>@ViewBag.books[i - 1].Stock</td>
+        </tr>
+    }
+</table>
+
+@section Scripts {
+    <script type="text/javascript">
+        $.fn.clearErrors = function () {
+            $(this).each(function () {
+                $(this).find(".field-validation-error").empty();
+            });
+        };
+
+        $(function () {
+            $("#attribute").change(function () {
+                $("#id-message, #name-message, #author-message, #year-message").clearErrors();
+                $("#id-textbox, #name-textbox, #author-textbox, #year-textbox").val("");
+                var selectedValue = $(this).val();
+                if (selectedValue == "id") {
+                    $("#id, #id-message").show();
+                    $("#name, #name-message, #author, #author-message, #year, #year-message").hide();
+                } else if (selectedValue == "name") {
+                    $("#name, #name-message").show();
+                    $("#id, #id-message, #author, #author-message, #year, #year-message").hide();
+                } else if (selectedValue == "author") {
+                    $("#author, #author-message").show();
+                    $("#id, #id-message, #name, #name-message, #year, #year-message").hide();
+                } else if (selectedValue == "year") {
+                    $("#year, #year-message").show();
+                    $("#id, #id-message, #name, #name-message, #author, #author-message").hide();
+                }
+            });
+        });
+    </script>
+}
+

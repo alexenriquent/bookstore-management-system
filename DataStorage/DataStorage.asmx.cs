@@ -15,11 +15,6 @@ namespace DataStorage {
     // [System.Web.Script.Services.ScriptService]
     public class DataStorage : System.Web.Services.WebService {
 
-        [WebMethod (Description = "This method prints out the current directory")]
-        public string Workspace() {
-            return HttpRuntime.AppDomainAppPath;
-        }
-
         [WebMethod (Description = "This method reads data from the text file")]
         public string[] Read() {
             return System.IO.File.ReadAllLines(HttpRuntime.AppDomainAppPath + "books.txt");

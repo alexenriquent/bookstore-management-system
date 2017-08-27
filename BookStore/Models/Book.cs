@@ -32,25 +32,5 @@ namespace BookStore.Models {
         [Required(ErrorMessage = "The field Stock is required.")]
         [Range(1, int.MaxValue, ErrorMessage = "The field Stock cannot be 0.")]
         public int Stock { get; set; }
-
-        //public Book() {
-        //    Index = 0;
-        //    ID = null;
-        //    Name = null;
-        //    Author = null;
-        //    Year = 0;
-        //    Price = 0;
-        //    Stock = 0;
-        //}
-
-        //public Book(int index, string id, string name, string author, int year, decimal price, int stock) {
-        //    Index = index;
-        //    ID = id;
-        //    Name = name;
-        //    Author = author;
-        //    Year = year;
-        //    Price = price;
-        //    Stock = stock;
-        //}
     }
 }

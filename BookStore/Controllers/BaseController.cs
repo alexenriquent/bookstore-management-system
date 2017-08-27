@@ -17,6 +17,7 @@ namespace BookStore.Controllers {
             for (int i = 0; i < bookList.Length; i++) {
                 string[] elements = bookList[i].Split(',');
                 Book book = new Book {
+                    Index = i + 1,
                     ID = elements[0],
                     Name = elements[1],
                     Author = elements[2],
@@ -29,5 +30,17 @@ namespace BookStore.Controllers {
             return books;
         }
 
+        protected virtual string BookString(List<Book> books) {
+            string bookList = string.Empty;
+            foreach (Book book in books) {
+                bookList += BookToString(book) + '\n';
+            }
+            return bookList.Substring(0, bookList.Length - 1);
+        }
+
+        private string BookToString(Book book) {
+            return book.ID + ',' + book.Name + ',' + book.Author + ',' +
+                   book.Year + ",$" + book.Price + ',' + book.Stock;
+        }
     }
 }
