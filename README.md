@@ -1,3 +1,3 @@
 # Bookstore Management System
-* A Data Storage Web Service Using ASP.NET Web Service
-* A Bookstore Application Using ASP.NET MVC and the Data Storage Web Service
+* A data storage web service using ASP.NET web service
+* A bookstore application using ASP.NET MVC and invoking the data storage web service
