@@ -10,35 +10,33 @@ namespace BookStore.Controllers {
     public class BookStoreController : BaseController {
 
         public ActionResult GetAllBooks() {
-            ViewBag.books = InitialiseBooks();
+            ViewBag.books = RetrieveBooks();
             return View();
         }
 
         [HttpGet]
         public ActionResult AddBook() {
-            ViewBag.books = InitialiseBooks();
+            ViewBag.books = RetrieveBooks();
             return View(new Book());
         }
 
         [HttpPost]
         public ActionResult AddBook(Book book) {
-            localhost.DataStorage storage = new localhost.DataStorage();
-            List<Book> books = InitialiseBooks();
+            List<Book> books = RetrieveBooks();
             books.Add(book);
-            storage.Write(BookString(books));
+            SaveBooks(books);
             return Redirect("/BookStore/AddBook");
         }
 
         [HttpGet]
         public ActionResult DeleteBook() {
-            ViewBag.books = InitialiseBooks();
+            ViewBag.books = RetrieveBooks();
             return View(new Book());
         }
 
         [HttpPost]
         public ActionResult DeleteBook(string attribute, Book book) {
-            localhost.DataStorage storage = new localhost.DataStorage();
-            List<Book> books = InitialiseBooks();
+            List<Book> books = RetrieveBooks();
             switch (attribute) {
                 case "num": books.RemoveAll(x => x.Index == book.Index); break;
                 case "id": books.RemoveAll(x => x.ID == book.ID); break;
@@ -46,7 +44,7 @@ namespace BookStore.Controllers {
                 case "author": books.RemoveAll(x => x.Author == book.Author); break;
                 case "year": books.RemoveAll(x => x.Year == book.Year); break;
             }
-            storage.Write(BookString(books));
+            SaveBooks(books);
             return Redirect("/BookStore/DeleteBook");
         }
 
@@ -61,7 +59,7 @@ namespace BookStore.Controllers {
 
         [HttpPost]
         public ActionResult SearchBook(string attribute, Book book) {
-            List<Book> books = InitialiseBooks();
+            List<Book> books = RetrieveBooks();
             List<Book> results = new List<Book>();
             switch (attribute) {
                 case "id": results = books.FindAll(x => x.ID == book.ID); break;

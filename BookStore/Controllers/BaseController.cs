@@ -9,7 +9,7 @@ namespace BookStore.Controllers {
 
     public abstract class BaseController : Controller {
 
-        protected virtual List<Book> InitialiseBooks() {
+        protected virtual List<Book> RetrieveBooks() {
             localhost.DataStorage storage = new localhost.DataStorage();
             List<Book> books = new List<Book>();
             string[] bookList = storage.Read();
@@ -30,12 +30,13 @@ namespace BookStore.Controllers {
             return books;
         }
 
-        protected virtual string BookString(List<Book> books) {
+        protected virtual void SaveBooks(List<Book> books) {
+            localhost.DataStorage storage = new localhost.DataStorage();
             string bookList = string.Empty;
             foreach (Book book in books) {
                 bookList += BookToString(book) + '\n';
             }
-            return bookList.Substring(0, bookList.Length - 1);
+            storage.Write(bookList.Substring(0, bookList.Length - 1));
         }
 
         private string BookToString(Book book) {
