@@ -70,5 +70,6 @@ namespace BookStore.Controllers {
             TempData["books"] = results;
             return RedirectToAction("/SearchBook");
         }
+
     }
 }

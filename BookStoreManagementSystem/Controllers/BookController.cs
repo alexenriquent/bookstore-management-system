@@ -16,6 +16,7 @@ namespace BookStoreManagementSystem.Controllers {
 
         // GET: Book
         public ActionResult Index() {
+            UpdateDatabase();
             return View(db.S4452232.ToList());
         }
 
@@ -124,6 +125,28 @@ namespace BookStoreManagementSystem.Controllers {
             UpdateDatabase();
             SaveBooks(db.S4452232.ToList());
             return Redirect("/Book/DeleteBooks");
+        }
+
+        // GET: Book/Search
+        public ActionResult Search() {
+            if (TempData["books"] == null)
+                ViewBag.books = new List<S4452232>();
+            else
+                ViewBag.books = TempData["books"];
+            return View(new S4452232());
+        }
+
+        [HttpPost]
+        public ActionResult Search(string attribute, S4452232 book) {
+            var books = from x in db.S4452232 select x;
+            switch (attribute) {
+                case "id": books = books.Where(x => x.ID.Contains(book.ID)); break;
+                case "name": books = books.Where(x => x.Name.Contains(book.Name)); break;
+                case "author": books = books.Where(x => x.Author.Contains(book.Author)); break;
+                case "year": books = books.Where(x => x.Year == book.Year); break;
+            }
+            TempData["books"] = books.ToList();
+            return RedirectToAction("/Search");
         }
     }
 }
