@@ -7,12 +7,16 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create") |
+    @Html.ActionLink("Delete Books", "DeleteBooks")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Index)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -36,6 +40,9 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Index)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Name)

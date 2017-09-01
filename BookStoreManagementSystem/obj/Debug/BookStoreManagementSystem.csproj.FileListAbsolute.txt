@@ -1,4 +1,3 @@
-\\Mac\Home\Desktop\SOA\BookStoreManagementSystem\obj\Debug\BookStoreManagementSystem.csprojResolveAssemblyReference.cache
 \\Mac\Home\Desktop\SOA\BookStoreManagementSystem\bin\ApplicationInsights.config
 \\Mac\Home\Desktop\SOA\BookStoreManagementSystem\bin\roslyn\csc.exe
 \\Mac\Home\Desktop\SOA\BookStoreManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -82,3 +81,5 @@
 \\Mac\Home\Desktop\SOA\BookStoreManagementSystem\obj\Debug\BookStoreManagementSystem.pdb
 \\Mac\Home\Desktop\SOA\BookStoreManagementSystem\obj\Debug\BookStoreManagementSystem.Migrations.InitialCreate.resources
 \\Mac\Home\Desktop\SOA\BookStoreManagementSystem\obj\Debug\BookStoreManagementSystem.csproj.GenerateResource.Cache
+\\Mac\Home\Desktop\SOA\BookStoreManagementSystem\obj\Debug\BookStoreManagementSystem.Migrations.Books.resources
+\\Mac\Home\Desktop\SOA\BookStoreManagementSystem\obj\Debug\BookStoreManagementSystem.csprojResolveAssemblyReference.cache
