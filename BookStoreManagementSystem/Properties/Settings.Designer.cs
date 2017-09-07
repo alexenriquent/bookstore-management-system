@@ -26,7 +26,7 @@ namespace BookStoreManagementSystem.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:51790/DataStorage.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:51993/DataStorage.asmx")]
         public string BookStoreManagementSystem_localhost_DataStorage {
             get {
                 return ((string)(this["BookStoreManagementSystem_localhost_DataStorage"]));

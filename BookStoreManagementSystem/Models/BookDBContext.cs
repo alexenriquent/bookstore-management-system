@@ -10,8 +10,9 @@ namespace BookStoreManagementSystem.Models {
         [Required(ErrorMessage = "The field Index is required.")]
         public int Index { get; set; }
 
+        [Key]
         [Required(ErrorMessage = "The field ID is required.")]
-        [RegularExpression(@"^\d{10}$", ErrorMessage = "The field ID must be a 10-digit number.")]
+        [RegularExpression(@"\d+", ErrorMessage = "The field ID must be a number.")]
         public string ID { get; set; }
 
         [Required(ErrorMessage = "The field Name is required.")]

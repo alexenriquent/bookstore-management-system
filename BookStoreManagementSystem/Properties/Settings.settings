@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="BookStoreManagementSystem_localhost_DataStorage" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:51790/DataStorage.asmx</Value>
+      <Value Profile="(Default)">http://localhost:51993/DataStorage.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

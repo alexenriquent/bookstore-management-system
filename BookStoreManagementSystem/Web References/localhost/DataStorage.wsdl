@@ -97,10 +97,10 @@
   </wsdl:binding>
   <wsdl:service name="DataStorage">
     <wsdl:port name="DataStorageSoap" binding="tns:DataStorageSoap">
-      <soap:address location="http://localhost:51790/DataStorage.asmx" />
+      <soap:address location="http://localhost:51993/DataStorage.asmx" />
     </wsdl:port>
     <wsdl:port name="DataStorageSoap12" binding="tns:DataStorageSoap12">
-      <soap12:address location="http://localhost:51790/DataStorage.asmx" />
+      <soap12:address location="http://localhost:51993/DataStorage.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

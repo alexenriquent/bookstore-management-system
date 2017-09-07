@@ -34,6 +34,10 @@ namespace BookStoreManagementSystem.Controllers {
 
         // GET: Book/Create
         public ActionResult Create() {
+            if (TempData["message"] == null)
+                ViewBag.message = "";
+            else
+                ViewBag.message = TempData["message"];
             return View();
         }
 
@@ -42,6 +46,10 @@ namespace BookStoreManagementSystem.Controllers {
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Index,Name,Author,Year,Price,Stock")] S4452232 s4452232) {
             if (ModelState.IsValid) {
+                if (db.S4452232.Any(o => o.ID == s4452232.ID)) {
+                    TempData["message"] = "Record already exists.";
+                    return RedirectToAction("/Create");
+                }
                 db.S4452232.Add(s4452232);
                 db.SaveChanges();
                 UpdateDatabase();
@@ -109,6 +117,10 @@ namespace BookStoreManagementSystem.Controllers {
 
         // GET: Book/DeleteBooks
         public ActionResult DeleteBooks() {
+            if (TempData["message"] == null)
+                ViewBag.message = "";
+            else
+                ViewBag.message = TempData["message"];
             ViewBag.books = db.S4452232.ToList();
             return View(new S4452232());
         }
@@ -117,9 +129,27 @@ namespace BookStoreManagementSystem.Controllers {
         [HttpPost]
         public ActionResult DeleteBooks(string attribute, S4452232 book) {
             switch (attribute) {
-                case "index": db.S4452232.RemoveRange(db.S4452232.Where(c => c.Index == book.Index)); break;
-                case "id": db.S4452232.RemoveRange(db.S4452232.Where(c => c.ID == book.ID)); break;
-                case "year": db.S4452232.RemoveRange(db.S4452232.Where(c => c.Year == book.Year)); break;
+                case "index":
+                    if (!db.S4452232.Any(o => o.Index == book.Index)) {
+                        TempData["message"] = "Record not found.";
+                        return RedirectToAction("/DeleteBooks");
+                    }
+                    db.S4452232.RemoveRange(db.S4452232.Where(x => x.Index == book.Index));
+                    break;
+                case "id":
+                    if (!db.S4452232.Any(o => o.ID == book.ID)) {
+                        TempData["message"] = "Record not found.";
+                        return RedirectToAction("/DeleteBooks");
+                    }
+                    db.S4452232.RemoveRange(db.S4452232.Where(x => x.ID == book.ID));
+                    break;
+                case "year":
+                    if (!db.S4452232.Any(o => o.Year == book.Year)) {
+                        TempData["message"] = "Record not found.";
+                        return RedirectToAction("/DeleteBooks");
+                    }
+                    db.S4452232.RemoveRange(db.S4452232.Where(x => x.Year == book.Year));
+                    break;
             }
             db.SaveChanges();
             UpdateDatabase();
